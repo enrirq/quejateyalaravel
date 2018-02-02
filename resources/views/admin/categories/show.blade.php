@@ -18,15 +18,15 @@
       </div>
     </div>
 
-      <div class="row">
-        <div class="col-md-3">
-          <label class="control-label">hashtag</label>
-        </div>
-        <div class="col-md-9">
-          <label class="badge badge-primary">{{$category->hashtag}}</label>
-        </div>
-</div>
-        <div class="row">
+    <div class="row">
+      <div class="col-md-3">
+        <label class="control-label">hashtag</label>
+      </div>
+      <div class="col-md-9">
+        <label class="badge badge-primary">{{$category->hashtag}}</label>
+      </div>
+    </div>
+    <div class="row">
           <div class="col-md-3">
             <label class="control-label">Publicado</label>
           </div>

@@ -66,6 +66,10 @@ Route::group(["namespace"=>'Admin'],function(){
     Route::get('etiquetas','TagController@index')->name('admin.tags.index');
     Route::get('etiquetas/crear','TagController@create')->name('admin.tags.create');
     Route::post('etiquetas','TagController@store')->name('admin.tags.store');
+    Route::get('etiquetas/{id}/editar','TagController@edit')->name('admin.tags.edit');
+    Route::put('etiquetas/{id}/actualizar','TagController@update')->name('admin.tags.update');
+    Route::get('etiquetas/{id}/detalle','TagController@show')->name('admin.tags.show');
+    Route::get('etiquetas/{id}/eliminar','TagController@delete')->name('admin.tags.delete');
     //despues en la carpeta view/admin creaar carpetas con nombres de lo que esta arriba con el mismo contenido
   });
 });

@@ -18,7 +18,7 @@
           <a class="dropdown-item" href="#">Home</a>
           <a class="dropdown-item" href="#">Publicaciones (Post)</a>
           <a class="dropdown-item" href="#">Prioridades</a>
-          <a class="dropdown-item" href="#">etiquetas (tags)</a>
+          <a class="dropdown-item" href="{{ route('admin.tags.index')}}">etiquetas (tags)</a>
           <a class="dropdown-item" href="{{ route('admin.valuations.index')}}">Valoraciones</a>
         </div>
       </li>
