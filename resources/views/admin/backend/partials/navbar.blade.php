@@ -17,7 +17,7 @@
           <a class="dropdown-item" href="{{ route('admin.countries.index')}}">Paises</a>
           <a class="dropdown-item" href="#">Home</a>
           <a class="dropdown-item" href="#">Publicaciones (Post)</a>
-          <a class="dropdown-item" href="#">Prioridades</a>
+          <a class="dropdown-item" href="{{ route('admin.priorities.index')}}">Prioridades</a>
           <a class="dropdown-item" href="{{ route('admin.tags.index')}}">etiquetas (tags)</a>
           <a class="dropdown-item" href="{{ route('admin.valuations.index')}}">Valoraciones</a>
         </div>

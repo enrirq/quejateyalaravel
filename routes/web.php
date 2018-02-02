@@ -58,6 +58,10 @@ Route::group(["namespace"=>'Admin'],function(){
     Route::get('prioridades','PriorityController@index')->name('admin.priorities.index'); //replicar
     Route::get('prioridades/crear','PriorityController@create')->name('admin.priorities.create'); //esto es para llamar
     Route::post('prioridades','PriorityController@store')->name('admin.priorities.store');
+    Route::get('prioridades/{id}/editar','PriorityController@edit')->name('admin.priorities.edit');
+    Route::put('prioridades/{id}/actualizar','PriorityController@update')->name('admin.priorities.update');
+    Route::get('prioridades/{id}/detalle','PriorityController@show')->name('admin.priorities.show');
+    Route::get('prioridades/{id}/eliminar','PriorityController@delete')->name('admin.priorities.delete');
     //posts
     Route::get('publicaciones','PostController@index')->name('admin.posts.index');
     Route::get('publicaciones/crear','PostController@create')->name('admin.posts.create');
