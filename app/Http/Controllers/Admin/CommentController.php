@@ -28,43 +28,43 @@ class CommentController extends Controller
   }
   public function store(Request $request)
   {
-        $comentary = new Comment();
-        $comentary->description = $request->get('description');
-        $comentary->published = $request->get('published');
-        $comentary->user_created = 1;
-        $comentary->save();
+        $comment = new Comment();
+        $comment->description = $request->get('description');
+        $comment->published = $request->get('published');
+        $comment->user_created = 1;
+        $comment->save();
         return redirect()->route('admin.comments.index');
   }
 
   public function edit($id){
-        $comentary = Comment::find($id);
+        $comment = Comment::find($id);
         $view = view('admin.comments.edit');
-        $view->with('comentary',$comentary);
+        $view->with('comment',$comment);
         return $view;
 
   }
 
   public function update(Request $request, $id){
-    $comentary = Comment::find($id);
-    $comentary->description = $request->get('description');
-    $comentary->published = $request->get('published');
-    $comentary->user_modified = 1;
-    $comentary->save();
+    $comment = Comment::find($id);
+    $comment->description = $request->get('description');
+    $comment->published = $request->get('published');
+    $comment->user_modified = 1;
+    $comment->save();
     return redirect()->route('admin.comments.index');
 
   }
 
   public function show($id){
-    $comentary = Comment::find($id);
+    $comment = Comment::find($id);
     $view = view('admin.comments.show');
-    $view->with('comentary',$comentary);
+    $view->with('comment',$comment);
     return $view;
 
   }
 
   public function delete($id){
-      $comentary = Comment::find($id);
-      $comentary->delete();
+      $comment = Comment::find($id);
+      $comment->delete();
       return redirect()->route('admin.comments.index');
 
   }

@@ -23,11 +23,11 @@
             </tr>
           </thead>
           <tbody>
-                  @foreach($comments as $comentary)
+                  @foreach($comments as $comment)
                         <tr>
-                          <td>{{$comentary->description}}</td>
+                          <td>{{$comment->description}}</td>
                           <td>
-                                  @if($comentary->published ==1)
+                                  @if($comment->published ==1)
                                   <a href="" class="btn btn-success">
                                     <i class="fa fa-check">
                                     </i>
@@ -40,13 +40,13 @@
                                   @endif
                           </td>
                           <td>
-                                  <a href="{{ route('admin.comments.edit',[$comentary->id]) }}" class="btn btn-success">
+                                  <a href="{{ route('admin.comments.edit',[$comment->id]) }}" class="btn btn-success">
                                       <i class="fa fa-pencil"></i>
                                   </a>
-                                  <a href="{{ route('admin.comments.show',[$comentary->id]) }}" class="btn btn-warning">
+                                  <a href="{{ route('admin.comments.show',[$comment->id]) }}" class="btn btn-warning">
                                       <i class="fa fa-eye"></i>
                                   </a>
-                                  <a href="{{ route('admin.comments.delete',[$comentary->id])}}" class="btn btn-danger">
+                                  <a href="{{ route('admin.comments.delete',[$comment->id])}}" class="btn btn-danger">
                                       <i class="fa fa-trash"></i>
                                   </a>
 

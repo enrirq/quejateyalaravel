@@ -4,20 +4,16 @@
 
 <div class="card">
   <div class="card-header">
-    <h3 class="card-title"> Nueva Valoracion </h3>
+    <h3 class="card-title"> Nueva COmentario </h3>
 
   </div>
   <div class="card-body">
 
-    <form action="{{ route('admin.valuations.store')}}" method="post" name="formValuation" id="formValuation">
-      <div class="form-group">
-        <label for="name" class="control-label">Nombre <span class="text-danger">*</span> </label>
-        <input type="text" name="name" id="name" value="" class="form-control" placeholder="Introduzca el nombre" requireed>
-      </div>
+    <form action="{{ route('admin.comments.store')}}" method="post" name="formComment" id="formComment">
       <div class="row">
         <div class="col-md-6">
-        <label for="position" class="control-label" >Posicion<span class="text-danger">*</span> </label>
-          <input type="text" name="position" id="position" value="" class="form-control" placeholder="Introduzca la valoracion del 1 al 10">
+        <label for="description" class="control-label" >descripcion<span class="text-danger">*</span> </label>
+          <input type="text" name="description" id="description" value="" class="form-control" placeholder="Introduzca un comentario">
         </div>
         <div class="col-md-6">
           <label for="published" class="control-label" >Publicado</label>
@@ -37,7 +33,7 @@
         <button  id="btnSave" class="btn btn-success">
           <i class="fa fa-save"></i> Guardar
         </button>
-        <a href="{{ route('admin.valuations.index')}}" class="btn btn-danger" id=btnCancel>
+        <a href="{{ route('admin.comments.index')}}" class="btn btn-danger" id=btnCancel>
             <i class="fa fa-arrow-left"></i> Volver
         </a>
   </div>
@@ -54,7 +50,7 @@
     //  $('#btnCancel').attr('href',"#");
     //  $('#btnCancel').attr('title',"Volver") <!--ESto es para cambiar cualquier atributo-->
     //  alert($('#btnSave').text());
-    $('#formValuation').submit(); //esto llama al tantos tantos que esta en http/controller/admin/categorycontroller
+    $('#formComment').submit(); //esto llama al tantos tantos que esta en http/controller/admin/categorycontroller
     })
   });
 </script>
